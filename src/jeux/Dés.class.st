@@ -7,9 +7,22 @@ Class {
 	#category : #jeux
 }
 
+{ #category : #'instance creation' }
+Dés class >> nombreFaces: anInteger [ 
+	|d|
+	 d:= Dés new.
+	 d faces: anInteger.
+	^ d 
+]
+
 { #category : #accessing }
 Dés >> faces [
 	^ faces
+]
+
+{ #category : #accessing }
+Dés >> faces: anInteger [ 
+	faces := anInteger
 ]
 
 { #category : #initialization }

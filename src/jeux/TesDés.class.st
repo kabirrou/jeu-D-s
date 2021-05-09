@@ -19,3 +19,11 @@ TesDés >> testlancerDés [
  [ self  assert: (d lancerDés between: 1 and:6) ]
  
 ]
+
+{ #category : #'as yet unclassified' }
+TesDés >> testnombreFacesDés [
+|d|
+ d:= Dés nombreFaces:20.
+  self  assert: d faces equals: 20
+ 
+]
