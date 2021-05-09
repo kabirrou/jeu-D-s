@@ -25,6 +25,22 @@ ManiputionDés >> initialize [
 ]
 
 { #category : #'as yet unclassified' }
+ManiputionDés >> lancerDés [ 
+ |res|
+  res:=0.
+ Dés do:[:e| res:= res + e lancerDés].
+  ^res
+]
+
+{ #category : #'as yet unclassified' }
+ManiputionDés >> maxvaleur [
+ |res|
+  res:=0.
+ Dés do: [:each| res:= res + each faces ].
+  ^res
+]
+
+{ #category : #'as yet unclassified' }
 ManiputionDés >> totalDés [
  ^Dés size 
 ]

@@ -35,3 +35,12 @@ Dés >> initialize [
 Dés >> lancerDés [
  ^ faces atRandom 
 ]
+
+{ #category : #printing }
+Dés >> printOn: aStream [
+
+super printOn: aStream. 
+aStream nextPutAll: '(', faces printString ,')'
+
+
+]
