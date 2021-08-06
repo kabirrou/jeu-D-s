@@ -1,5 +1,5 @@
 Class {
-	#name : #'Dés',
+	#name : #'Dés2',
 	#superclass : #Object,
 	#instVars : [
 		'faces'
@@ -8,36 +8,36 @@ Class {
 }
 
 { #category : #'instance creation' }
-Dés class >> nombreFaces: anInteger [ 
+Dés2 class >> nombreFaces: anInteger [ 
 	|d|
-	 d:= Dés new.
+	 d:= Dés2 new.
 	 d faces: anInteger.
 	^ d 
 ]
 
 { #category : #accessing }
-Dés >> faces [
+Dés2 >> faces [
 	^ faces
 ]
 
 { #category : #accessing }
-Dés >> faces: anInteger [ 
+Dés2 >> faces: anInteger [ 
 	faces := anInteger
 ]
 
 { #category : #initialization }
-Dés >> initialize [ 
+Dés2 >> initialize [ 
  super initialize.
  faces :=6
 ]
 
 { #category : #'as yet unclassified' }
-Dés >> lancerDés [
+Dés2 >> lancerDés [
  ^ faces atRandom 
 ]
 
 { #category : #printing }
-Dés >> printOn: aStream [
+Dés2 >> printOn: aStream [
 
 super printOn: aStream. 
 aStream nextPutAll: '(', faces printString ,')'
