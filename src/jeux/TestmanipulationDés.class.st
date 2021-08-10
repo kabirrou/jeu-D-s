@@ -7,7 +7,7 @@ Class {
 { #category : #'as yet unclassified' }
 TestmanipulationDés >> testajoutDés [
 |ajout|
- ajout:= ManiputionDés2 new 
+ ajout:= ManiputionDés new 
    ajoutDés:(Dés nombreFaces: 6);
    ajoutDés:(Dés nombreFaces: 20);
  yourself.
@@ -17,7 +17,7 @@ TestmanipulationDés >> testajoutDés [
 { #category : #'as yet unclassified' }
 TestmanipulationDés >> testcreationDés [
 |ajout|
- ajout:= ManiputionDés2 new ajoutDés:(Dés nombreFaces: 6).
+ ajout:= ManiputionDés new ajoutDés:(Dés nombreFaces: 6).
  self assert: ajout totalDés equals:1.
  ajout ajoutDés:(Dés nombreFaces:6).
  self assert: ajout totalDés equals: 2. 
@@ -27,7 +27,7 @@ TestmanipulationDés >> testcreationDés [
 { #category : #'as yet unclassified' }
 TestmanipulationDés >> testlancerDés [
 |ajout|
- ajout:= ManiputionDés2 new ajoutDés:(Dés nombreFaces: 6).
+ ajout:= ManiputionDés new ajoutDés:(Dés nombreFaces: 6).
  ajout ajoutDés:(Dés nombreFaces:10).
  self assert: (ajout lancerDés between: ajout totalDés  and:ajout maxvaleur) . 
  
@@ -36,7 +36,7 @@ TestmanipulationDés >> testlancerDés [
 { #category : #'as yet unclassified' }
 TestmanipulationDés >> testmaxvaleur [
 |ajout|
- ajout:= ManiputionDés2 new ajoutDés:(Dés nombreFaces: 6).
+ ajout:= ManiputionDés new ajoutDés:(Dés nombreFaces: 6).
  ajout ajoutDés:(Dés nombreFaces:10).
  self assert: ajout maxvaleur  equals: 16. 
  

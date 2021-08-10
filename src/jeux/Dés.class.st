@@ -17,7 +17,7 @@ Dés class >> nombreFaces: anInteger [
 
 { #category : #accessing }
 Dés >> faces [
-	^ faces 
+	^ faces
 ]
 
 { #category : #accessing }

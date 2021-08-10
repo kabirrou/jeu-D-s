@@ -1,5 +1,5 @@
 Class {
-	#name : #'ManiputionDés2',
+	#name : #'ManiputionDés',
 	#superclass : #Object,
 	#instVars : [
 		'Dés'
@@ -8,24 +8,24 @@ Class {
 }
 
 { #category : #accessing }
-ManiputionDés2 >> Dés [ 
+ManiputionDés >> Dés [ 
  ^Dés  
 ]
 
 { #category : #'as yet unclassified' }
-ManiputionDés2 >> ajoutDés: aDés [
+ManiputionDés >> ajoutDés: aDés [
    Dés add: aDés
 
 ]
 
 { #category : #initialization }
-ManiputionDés2 >> initialize [ 
+ManiputionDés >> initialize [ 
  super initialize. 
  Dés:= OrderedCollection new.
 ]
 
 { #category : #'as yet unclassified' }
-ManiputionDés2 >> lancerDés [ 
+ManiputionDés >> lancerDés [ 
  |res|
   res:=0.
  Dés do:[:e| res:= res + e lancerDés].
@@ -33,7 +33,7 @@ ManiputionDés2 >> lancerDés [
 ]
 
 { #category : #'as yet unclassified' }
-ManiputionDés2 >> maxvaleur [
+ManiputionDés >> maxvaleur [
  |res|
   res:=0.
  Dés do: [:each| res:= res + each faces ].
@@ -41,6 +41,6 @@ ManiputionDés2 >> maxvaleur [
 ]
 
 { #category : #'as yet unclassified' }
-ManiputionDés2 >> totalDés [
+ManiputionDés >> totalDés [
  ^Dés size 
 ]
